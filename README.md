@@ -1,6 +1,4 @@
-About this Repo
-======
+# An Odoo 14 Container Optimized for Unraid
+This is the git repo for the docker image of Odoo 14 which has been optimized for Unraid. See the Office Odoo Docker Hub page for the full readme on how to use the Docker image and for information regarding contributing and issues.
 
-This is the Git repo of the official Docker image for [Odoo](https://registry.hub.docker.com/_/odoo/). See the Hub page for the full readme on how to use the Docker image and for information regarding contributing and issues.
-
-The full readme is generated over in [docker-library/docs](https://github.com/docker-library/docs), specifically in [docker-library/docs/odoo](https://github.com/docker-library/docs/tree/master/odoo).
+The full readme is generated over in docker-library/docs, specifically in docker-library/docs/odoo.
