@@ -70,7 +70,6 @@ COPY ./odoo.conf /etc/odoo/
 # Set permissions on entrypoint
 RUN chmod +x /entrypoint.sh
 RUN chmod +x /etc/odoo/odoo.conf
-RUN chmod +x /*
 
 # Set permissions and Mount /var/lib/odoo to allow restoring filestore and /mnt/extra-addons for users addons
 RUN chown odoo /etc/odoo/odoo.conf \
