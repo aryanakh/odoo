@@ -4,7 +4,7 @@
 set -e
 
 # redirect new file descriptors and then tee stdout & stderr to supervisor log and console (captures output from this script)
-exec 3>&1 4>&2 &> >(tee -a /config/supervisord.log)
+exec 3>&1 4>&2 &> >(tee -a /etc/odoo/supervisord.log)
 
 cat << "EOF"
 Maintained by.....
@@ -28,7 +28,7 @@ EOF
 ####
 
 # define comma separated list of paths 
-#install_paths="/srv/minecraft,/home/nobody"
+install_paths="/var/lib/odoo,/mnt/extra-addons,/etc/odoo"
 
 # split comma separated string into list for install paths
 IFS=',' read -ra install_paths_list <<< "${install_paths}"
