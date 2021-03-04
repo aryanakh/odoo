@@ -67,8 +67,8 @@ RUN curl -o odoo.deb -sSL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/od
 COPY ./entrypoint.sh /
 COPY ./odoo.conf /etc/odoo/
 
-# Set permissions on scripts
-RUN chmod +x /entrypoint.sh && /wait-for-psql.py
+# Set permissions on entrypoint
+RUN chmod +x /entrypoint.sh
 
 # Set permissions and Mount /var/lib/odoo to allow restoring filestore and /mnt/extra-addons for users addons
 RUN chown odoo /etc/odoo/odoo.conf \
@@ -83,6 +83,9 @@ EXPOSE 8069 8071 8072
 ENV ODOO_RC /etc/odoo/odoo.conf
 
 COPY wait-for-psql.py /usr/local/bin/wait-for-psql.py
+
+# Set permissions on entrypoint
+RUN chmod +x /usr/local/bin/wait-for-psql.py
 
 # Set default user when running the container
 USER odoo
