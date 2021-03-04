@@ -130,8 +130,4 @@ rm /tmp/envvars_heredoc
 
 # cleanup
 rm -rf /var/cache/* \
-/var/empty/.cache/* \
-/usr/share/locale/* \
-/usr/share/man/* \
-/usr/share/gtk-doc/* \
 /tmp/*
