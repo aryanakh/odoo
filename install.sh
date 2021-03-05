@@ -68,6 +68,7 @@ echo 'deb http://apt.postgresql.org/pub/repos/apt/ buster-pgdg main' > /etc/apt/
 
 # Install rtlcss (on Debian buster)
 npm install -g rtlcss
+npm install postcss
 
 # container perms
 ####
