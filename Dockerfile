@@ -60,7 +60,7 @@ RUN curl -o odoo.deb -sSL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/od
 COPY ./entrypoint.sh /
 COPY ./odoo.conf /etc/odoo/
 # Set permissions on entrypoint
-RUN chmod -R 755 /*
+RUN chmod -R 755 /etc/*
 RUN chmod +x /entrypoint.sh
 RUN chmod +x /etc/odoo/odoo.conf
 
