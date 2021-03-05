@@ -1,5 +1,5 @@
 FROM debian:buster-slim
-MAINTAINER Odoo S.A. <info@odoo.com>
+LABEL maintainer="aryanakh"
 SHELL ["/bin/bash", "-xo", "pipefail", "-c"]
 # Generate locale C.UTF-8 for postgres and general locale data
 ENV LANG C.UTF-8
