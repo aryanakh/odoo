@@ -74,7 +74,7 @@ npm install postcss
 ####
 
 # define comma separated list of paths 
-install_paths="/var/lib/odoo,/mnt/extra-addons,/etc/odoo"
+install_paths="/etc/odoo"
 
 # split comma separated string into list for install paths
 IFS=',' read -ra install_paths_list <<< "${install_paths}"
@@ -116,7 +116,7 @@ EOF
 sed -i '/# PERMISSIONS_PLACEHOLDER/{
     s/# PERMISSIONS_PLACEHOLDER//g
     r /tmp/permissions_heredoc
-}' /usr/local/bin/init.sh
+}' /usr/local/bin/install.sh
 rm /tmp/permissions_heredoc
 
 # env vars
@@ -126,7 +126,7 @@ rm /tmp/permissions_heredoc
 sed -i '/# ENVVARS_PLACEHOLDER/{
     s/# ENVVARS_PLACEHOLDER//g
     r /tmp/envvars_heredoc
-}' /usr/local/bin/init.sh
+}' /usr/local/bin/install.sh
 rm /tmp/envvars_heredoc
 
 # cleanup
