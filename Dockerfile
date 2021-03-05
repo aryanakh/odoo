@@ -6,10 +6,10 @@ SHELL ["/bin/bash", "-xo", "pipefail", "-c"]
 # Generate locale C.UTF-8 for postgres and general locale data
 ENV LANG C.UTF-8
 
-COPY /install.sh /root/
+COPY /install.sh /
 
-RUN chmod +x /root/*.sh && \
-        /bin/bash /root/install.sh
+RUN chmod +x /install.sh && \
+        /bin/bash /install.sh
 
 # Install Odoo
 ENV ODOO_VERSION 14.0
