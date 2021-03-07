@@ -61,7 +61,7 @@ COPY ./entrypoint.sh /
 COPY odoo.conf /etc/odoo/
 
 # Install setuptools-odoo
-RUN pip install setuptools-odoo
+RUN python -m pip install setuptools-odoo
 
 # Set permissions on entrypoint
 RUN chmod -R 755 /etc/odoo/*
